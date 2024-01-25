@@ -1,8 +1,8 @@
 # Easy WMS
 
-Aplikasi manajemen pergudangan berbasis web dengan menggunakan framework CodeIgniter 3
+Aplikasi manajemen pergudangan berbasis web dengan menggunakan framework CodeIgniter 3.
 
-File database bisa ditemukan di /assets/db/easy_wms.sql
+File database ada di [/assets/db/easy_wms.sql](./assets/db/easy_wms.sql).
 
 ## Tampilan Dashboard
 
@@ -12,11 +12,10 @@ File database bisa ditemukan di /assets/db/easy_wms.sql
 
 ## Cara Login
 
-| User	|       Email				| Password |
-|:-----:|:-----------------:|:--------:|
-| Admin	| admin@easywms.com	| admin    |
-| Sunu	| sunu@easywms.com	| sunu     |
-| Amir	| amir@easywms.com	| amir     |
+| User  |       Email       | Password |
+| :---: | :---------------: | :------: |
+| Admin | admin@easywms.com |  admin   |
+| Sunu  | sunu@easywms.com  |   sunu   |
+| Amir  | amir@easywms.com  |   amir   |
 
 <img src="/assets/images/users.png" alt="Tabel User" height="105">
-
