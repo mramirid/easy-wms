@@ -50,6 +50,14 @@
                                                 </a>
                                             </td>
                                         <?php endif ?>
+
+                                        <?php if ($this->session->userdata('role') == 'admin') : ?>
+                                            <td class="border-top-0 text-center text-muted px-2 py-4">
+                                                <a href="<?= base_url("suppliers/delete/$row->id") ?>" class="btn btn-sm">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                            </td>
+                                        <?php endif ?>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>

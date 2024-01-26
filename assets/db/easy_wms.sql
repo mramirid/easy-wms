@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: May 16, 2020 at 02:01 PM
--- Server version: 5.7.24
--- PHP Version: 7.2.19
+-- Host: localhost
+-- Generation Time: Jan 26, 2024 at 12:59 AM
+-- Server version: 5.7.43
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -322,7 +322,8 @@ INSERT INTO `user` (`id`, `nama`, `email`, `password`, `telefon`, `ktp`, `role`,
 -- Indexes for table `barang`
 --
 ALTER TABLE `barang`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_supplier` (`id_supplier`);
 
 --
 -- Indexes for table `barang_keluar`
@@ -441,6 +442,16 @@ ALTER TABLE `supplier`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `barang`
+--
+ALTER TABLE `barang`
+  ADD CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`id_supplier`) REFERENCES `supplier` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

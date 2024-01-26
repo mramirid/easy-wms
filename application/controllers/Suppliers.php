@@ -107,6 +107,17 @@ class Suppliers extends MY_Controller
         redirect(base_url('suppliers'));
     }
 
+    public function delete(string $id) {
+        $isDeleted = $this->suppliers->where('id', $id)->delete();
+        if ($isDeleted) {
+            $this->session->set_flashdata('success', 'Supplier berhasil dihapus');
+        } else {
+            $this->session->set_flashdata('error', 'Oops, terjadi suatu kesalahan');
+        }
+
+        redirect(base_url('suppliers'));
+    }
+
     public function unique_email()
     {
         $email      = $this->input->post('email');
